@@ -1,0 +1,48 @@
+{
+  "name": "vue-currency-formatter-lite",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight (<1KB) global currency formatter for Vue 3",
+  "main": "./dist/vue-currency-formatter-lite.umd.js",
+  "module": "./dist/vue-currency-formatter-lite.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-currency-formatter-lite.es.js",
+      "require": "./dist/vue-currency-formatter-lite.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "currency",
+    "formatter",
+    "intl",
+    "lightweight",
+    "finance"
+  ],
+  "author": "Ajithkumar Venkatraman",
+  "license": "MIT",
+  "sideEffects": false,
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/compiler-sfc": "^3.5.26",
+    "happy-dom": "^20.1.0",
+    "terser": "^5.44.1",
+    "vitest": "^4.0.17",
+    "vue": "^3.5.26"
+  }
+}
