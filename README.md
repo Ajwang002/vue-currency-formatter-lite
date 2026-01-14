@@ -1,6 +1,11 @@
-# vue-currency-lite 🪙
+# vue-currency-formatter-lite 🪙
 
 An ultra-lightweight (< 1KB), high-performance Vue 3 library for global currency formatting. It leverages the native `Intl.NumberFormat` API and includes an intelligent caching layer for maximum efficiency.
+
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue-currency-formatter-lite?color=brightgreen&label=bundle%20size)
+![npm downloads](https://img.shields.io/npm/dm/vue-currency-formatter-lite?color=blue)
+![npm version](https://img.shields.io/npm/v/vue-currency-formatter-lite)
+![license](https://img.shields.io/github/license/Ajwang002/vue-currency-formatter-lite)
 
 ## ✨ Features
 
