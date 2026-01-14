@@ -1,6 +1,9 @@
-import { CURRENCY_LOCALE_MAP } from "./constants";
+import { CURRENCY_LOCALE_MAP, CURRENCY_CHOICES, LOCALE_CHOICES } from "./constants";
 
 const cache = new Map();
+
+export const Currencies = CURRENCY_CHOICES
+export const Locales = LOCALE_CHOICES
 
 export const formatCurrency = (value, currency = 'USD', locale = 'en-US', options = {}) => {
   const { 

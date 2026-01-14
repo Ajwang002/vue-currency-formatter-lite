@@ -1,11 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { formatCurrency } from './formatter';
-import { CURRENCY_CHOICES, LOCALE_CHOICES} from './constants';
+import { formatCurrency, Locales, Currencies } from './formatter';
 
 describe('vue-currency-lite logic', () => {
   
   it('formats Indian Rupees in Lakhs correctly', () => {
-    const result = formatCurrency(250000, CURRENCY_CHOICES.INR, LOCALE_CHOICES.INDIA);
+    const result = formatCurrency(250000, Currencies.INR, Locales.INDIA);
     // Note: \u00A0 is a non-breaking space often used by Intl
     expect(result.replace(/\u00A0/g, ' ')).toBe('₹2,50,000.00');
   });
