@@ -51,7 +51,7 @@ Using the dictionary constants prevents typos and enables IDE autocomplete.
 
 ```bash
 <script setup>
-import { useCurrency, Currencies, Locales } from 'vue-currency-formatter';
+import { useCurrency, Currencies, Locales } from 'vue-currency-formatter-lite';
 
 const { format } = useCurrency();
 

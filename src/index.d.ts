@@ -1,6 +1,40 @@
 import { App, Plugin } from 'vue';
 
 /**
+ * 1. Define the specific Currency type from your choices
+ */
+export type CurrencyCode = 'USD' | 'INR' | 'EUR' | 'GBP' | 'JPY' | 'AED';
+
+/**
+ * 2. Define the specific Locale type from your choices
+ */
+export type LocaleName = 'USA' | 'INDIA' | 'GERMANY' | 'UK' | 'JAPAN' | 'UAE';
+
+/**
+ * 3. Define the Currency choices object
+ */
+export declare const Currencies: {
+  readonly USD: 'USD';
+  readonly INR: 'INR';
+  readonly EUR: 'EUR';
+  readonly GBP: 'GBP';
+  readonly JPY: 'JPY';
+  readonly AED: 'AED';
+};
+
+/**
+ * 4. Define the Locale choices object
+ */
+export declare const Locales: {
+  readonly USA: 'en-US';
+  readonly INDIA: 'en-IN';
+  readonly GERMANY: 'de-DE';
+  readonly UK: 'en-GB';
+  readonly JAPAN: 'ja-JP';
+  readonly UAE: 'ar-AE';
+};
+
+/**
  * Configuration options for the formatter
  */
 export interface CurrencyOptions {
@@ -19,8 +53,8 @@ export interface CurrencyOptions {
  */
 export declare function formatCurrency(
   value: number,
-  currency?: string,
-  locale?: string,
+  currency?: CurrencyCode | string,
+  locale?: LocaleName | string,
   options?: CurrencyOptions
 ): string;
 
@@ -35,7 +69,7 @@ export declare function useCurrency(): {
  * Vue Plugin registration
  */
 declare const plugin: Plugin & {
-  install: (app: App, defaultOptions?: { currency?: string; locale?: string }) => void;
+  install: (app: App, defaultOptions?: { currency?: CurrencyCode | string; locale?: LocaleName | string }) => void;
 };
 
 export default plugin;
