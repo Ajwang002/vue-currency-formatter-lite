@@ -1,9 +1,17 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import dts from 'vite-plugin-dts';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    dts({ 
+      insertTypesEntry: true, // Auto-links the types in package.json
+      rollupTypes: true, // Merges everything into one clean .d.ts file
+      skipDiagnostics: true // Speeds up build by skipping extra type-checks
+     }) // This will move/generate types into dist
+  ],
   build: {
     lib: {
       // Points to your main entry point
